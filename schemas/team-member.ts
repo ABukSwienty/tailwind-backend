@@ -1,22 +1,26 @@
 import {Rule} from 'sanity'
 
 export default {
-  name: 'howWeWorkCard',
+  name: 'teamMember',
   type: 'document',
-  title: 'How We Work - Card',
+  title: 'Team Member',
   fields: [
+    {
+      name: 'name',
+      type: 'string',
+      title: 'Name',
+      validation: (Rule: Rule) => Rule.required(),
+    },
     {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: "The card's title.",
       validation: (Rule: Rule) => Rule.required(),
     },
     {
-      name: 'content',
-      type: 'text',
-      title: 'Content',
-      description: "The card's content. Keep it to a few sentences. Spaces are ignored.",
+      name: 'image',
+      type: 'image',
+      title: 'Image',
       validation: (Rule: Rule) => Rule.required(),
     },
   ],
