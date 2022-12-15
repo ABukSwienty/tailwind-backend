@@ -13,7 +13,7 @@ export default {
       validation: (Rule: Rule) => Rule.required(),
     },
     {
-      name: 'subtitle',
+      name: 'subTitle',
       type: 'string',
       title: 'Subtitle',
       description: 'A brief sentence describing the case.',
