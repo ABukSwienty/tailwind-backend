@@ -1,9 +1,9 @@
 import {Rule} from 'sanity'
 
 export default {
-  name: 'howWeWorkPage',
+  name: 'casesPage',
   type: 'document',
-  title: 'How We Work - Page',
+  title: 'Cases - Page',
   fields: [
     {
       name: 'title',
@@ -13,16 +13,16 @@ export default {
       validation: (Rule: Rule) => Rule.required(),
     },
     {
-      name: 'sections',
-      title: 'Sections',
+      name: 'cases',
+      title: 'Cases',
       type: 'array',
       description:
-        'Sections that will be displayed on the how we work page. Will appear in the order below. Drag and drop to reorder.',
-      of: [{type: 'reference', to: [{type: 'howWeWorkSection'}]}],
+        'Cases that will be displayed on the cases page. Will appear in the order below. Drag and drop to reorder.',
+      of: [{type: 'reference', to: [{type: 'clientCase'}]}],
       validation: (Rule: Rule) => Rule.required(),
     },
   ],
   initialValue: {
-    title: 'How We Work',
+    title: 'Cases',
   },
 }

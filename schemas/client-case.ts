@@ -1,7 +1,7 @@
 import {Rule} from 'sanity'
 
 export default {
-  name: 'case',
+  name: 'clientCase',
   type: 'document',
   title: 'Case',
   fields: [
@@ -22,8 +22,9 @@ export default {
     },
     {
       name: 'caseImage',
-      type: 'image',
+      type: 'reference',
       title: 'Case Image',
+      to: [{type: 'imageContent'}],
       validation: (Rule: Rule) => Rule.required(),
     },
     {
