@@ -34,5 +34,12 @@ export default {
       of: [{type: 'reference', to: [{type: 'howWeWorkCard'}]}],
       validation: (Rule: Rule) => Rule.required(),
     },
+    {
+      name: 'cases',
+      title: 'Cases',
+      type: 'array',
+      description: 'Cases that will be displayed on the how we work section.',
+      of: [{type: 'reference', to: [{type: 'clientCase'}]}],
+    },
   ],
 }
