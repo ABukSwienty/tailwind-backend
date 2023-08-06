@@ -21,6 +21,12 @@ export default {
         Rule.required().max(65).error("The case's title must be less than 65 characters."),
     },
     {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+      description: 'A longer description of the case.',
+    },
+    {
       name: 'caseImage',
       type: 'reference',
       title: 'Case Image',
