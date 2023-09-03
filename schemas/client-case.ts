@@ -39,5 +39,11 @@ export default {
       title: 'Link',
       validation: (Rule: Rule) => Rule.required(),
     },
+    {
+      name: 'keynote',
+      type: 'boolean',
+      title: 'Keynote',
+      description: 'Is the case a keynote case?',
+    },
   ],
 }
